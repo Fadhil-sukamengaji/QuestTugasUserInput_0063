@@ -31,4 +31,13 @@ fun BiodataScreen() {
     var isUiUxChecked by remember { mutableStateOf(false) }
     var isWebChecked by remember { mutableStateOf(false) }
 
+    Scaffold(
+        modifier = Modifier.fillMaxSize()
+    ) { innerPadding ->
+        Box(
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(innerPadding)
+        )
+    }
 }
