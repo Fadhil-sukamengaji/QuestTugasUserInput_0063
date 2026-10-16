@@ -48,6 +48,20 @@ fun BiodataScreen() {
                 contentScale = ContentScale.Crop
             )
 
+            Column(
+                modifier = Modifier
+                    .fillMaxSize()
+                    .verticalScroll(rememberScrollState())
+            ) {
+                Spacer(modifier = Modifier.height(220.dp))
 
+                Card(
+                    shape = RoundedCornerShape(topStart = 32.dp, topEnd = 32.dp),
+                    colors = CardDefaults.cardColors(containerColor = colorResource(id = R.color.card_bg)),
+                    elevation = CardDefaults.cardElevation(defaultElevation = 8.dp),
+                    modifier = Modifier.fillMaxWidth()
+                )
+            }
+        }
     }
 }
