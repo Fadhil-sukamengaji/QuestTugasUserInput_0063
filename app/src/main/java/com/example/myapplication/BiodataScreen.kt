@@ -47,7 +47,7 @@ fun BiodataScreen() {
                     .height(380.dp),
                 contentScale = ContentScale.Crop
             )
-
+            
             Column(
                 modifier = Modifier
                     .fillMaxSize()
@@ -60,7 +60,50 @@ fun BiodataScreen() {
                     colors = CardDefaults.cardColors(containerColor = colorResource(id = R.color.card_bg)),
                     elevation = CardDefaults.cardElevation(defaultElevation = 8.dp),
                     modifier = Modifier.fillMaxWidth()
-                )
+                ) {
+                    Column(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .padding(24.dp),
+                        horizontalAlignment = Alignment.CenterHorizontally
+                    ) {
+                        Text(
+                            text = stringResource(id = R.string.form_title),
+                            fontSize = 26.sp,
+                            fontWeight = FontWeight.Bold,
+                            color = colorResource(id = R.color.purple_title)
+                        )
+                        Spacer(modifier = Modifier.height(4.dp))
+                        Text(
+                            text = stringResource(id = R.string.form_subtitle),
+                            fontSize = 12.sp,
+                            color = colorResource(id = R.color.text_subtitle)
+                        )
+                        Spacer(modifier = Modifier.height(24.dp))
+
+                        Row(
+                            modifier = Modifier.fillMaxWidth(),
+                            horizontalArrangement = Arrangement.spacedBy(8.dp)
+                        ) {
+                            OutlinedTextField(
+                                value = firstName,
+                                onValueChange = { firstName = it },
+                                placeholder = { Text(stringResource(id = R.string.hint_first_name)) },
+                                shape = RoundedCornerShape(16.dp),
+                                modifier = Modifier.weight(1f)
+                            )
+                            OutlinedTextField(
+                                value = lastName,
+                                onValueChange = { lastName = it },
+                                placeholder = { Text(stringResource(id = R.string.hint_last_name)) },
+                                shape = RoundedCornerShape(16.dp),
+                                modifier = Modifier.weight(1f)
+                            )
+                        }
+                        Spacer(modifier = Modifier.height(16.dp))
+
+
+                }
             }
         }
     }
