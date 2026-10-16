@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="purple_title">#5B247A</color>
+    <color name="text_subtitle">#707070</color>
 
 </resources>
