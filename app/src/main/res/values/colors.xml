@@ -3,5 +3,6 @@
     <color name="purple_title">#5B247A</color>
     <color name="text_subtitle">#707070</color>
     <color name="card_bg">#FFFFFF</color>
+    <color name="field_border">#B0BEC5</color>
 
 </resources>
