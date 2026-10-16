@@ -111,6 +111,39 @@ fun BiodataScreen() {
                         )
                         Spacer(modifier = Modifier.height(16.dp))
 
+                        Row(
+                            modifier = Modifier.fillMaxWidth(),
+                            horizontalArrangement = Arrangement.spacedBy(8.dp)
+                        ) {
+                            OutlinedTextField(
+                                value = dob,
+                                onValueChange = { dob = it },
+                                placeholder = { Text(stringResource(id = R.string.hint_dob)) },
+                                trailingIcon = {
+                                    Icon(
+                                        painter = painterResource(id = android.R.drawable.ic_menu_my_calendar),
+                                        contentDescription = null
+                                    )
+                                },
+                                shape = RoundedCornerShape(16.dp),
+                                modifier = Modifier.weight(1f)
+                            )
+                            OutlinedTextField(
+                                value = experience,
+                                onValueChange = { experience = it },
+                                placeholder = { Text(stringResource(id = R.string.hint_experience)) },
+                                trailingIcon = {
+                                    Icon(
+                                        painter = painterResource(id = android.R.drawable.arrow_down_float),
+                                        contentDescription = null
+                                    )
+                                },
+                                shape = RoundedCornerShape(16.dp),
+                                modifier = Modifier.weight(1f)
+                            )
+                        }
+                        Spacer(modifier = Modifier.height(20.dp))
+
 
                     }
                 }
