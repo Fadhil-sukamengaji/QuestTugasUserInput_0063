@@ -38,6 +38,16 @@ fun BiodataScreen() {
             modifier = Modifier
                 .fillMaxSize()
                 .padding(innerPadding)
-        )
+        ){
+            Image(
+                painter = painterResource(id = R.drawable.background_login),
+                contentDescription = null,
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .height(380.dp),
+                contentScale = ContentScale.Crop
+            )
+
+
     }
 }
