@@ -4,5 +4,6 @@
     <color name="text_subtitle">#707070</color>
     <color name="card_bg">#FFFFFF</color>
     <color name="field_border">#B0BEC5</color>
+    <color name="button_bg">#E0E0E0</color>
 
 </resources>
