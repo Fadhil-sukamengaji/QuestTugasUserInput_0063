@@ -143,7 +143,7 @@ fun BiodataScreen() {
                             )
                         }
                         Spacer(modifier = Modifier.height(20.dp))
-l
+
                         Column(modifier = Modifier.fillMaxWidth()) {
                             Text(
                                 text = stringResource(id = R.string.label_skills),
@@ -181,7 +181,23 @@ l
                         }
                         Spacer(modifier = Modifier.height(24.dp))
 
-
+                        Button(
+                            onClick = {},
+                            shape = RoundedCornerShape(16.dp),
+                            colors = ButtonDefaults.buttonColors(
+                                containerColor = colorResource(id = R.color.button_bg)
+                            ),
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .height(50.dp)
+                        ) {
+                            Text(
+                                text = stringResource(id = R.string.btn_proceed),
+                                color = colorResource(id = R.color.button_text),
+                                fontSize = 16.sp,
+                                fontWeight = FontWeight.Bold
+                            )
+                        }
                     }
                 }
             }
